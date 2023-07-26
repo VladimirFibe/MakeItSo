@@ -1,10 +1,3 @@
-//
-//  MakeItSoApp.swift
-//  MakeItSo
-//
-//  Created by MacService on 7/26/23.
-//
-
 import SwiftUI
 
 @main

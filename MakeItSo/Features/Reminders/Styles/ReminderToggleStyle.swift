@@ -1,18 +1,38 @@
-//
-//  ReminderToggleStyle.swift
-//  MakeItSo
-//
-//  Created by MacService on 7/26/23.
-//
-
 import SwiftUI
 
-struct ReminderToggleStyle: View {
+struct ReminderToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        HStack {
+            Image(systemName: configuration.isOn ? "largecircle.fill.circle" : "circle")
+                .resizable()
+                .frame(width: 24, height: 24)
+                .foregroundStyle(configuration.isOn ? Color.accentColor : .gray)
+                .onTapGesture {
+                    configuration.isOn.toggle()
+                }
+            configuration.label
+        }
+    }
+    
+    
+}
+
+struct ContainerToggle: View {
+    @State private var isOn = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Toggle(isOn: $isOn) {
+            Text("Hello")
+        }
+        .toggleStyle(.reminder)
     }
 }
 
 #Preview {
-    ReminderToggleStyle()
+    ContainerToggle()
+}
+
+extension ToggleStyle where Self == ReminderToggleStyle {
+    static var reminder: ReminderToggleStyle {
+        ReminderToggleStyle()
+    }
 }

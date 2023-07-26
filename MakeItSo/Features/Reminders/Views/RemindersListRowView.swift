@@ -1,18 +1,27 @@
-//
-//  RemindersListRowView.swift
-//  MakeItSo
-//
-//  Created by MacService on 7/26/23.
-//
-
 import SwiftUI
 
 struct RemindersListRowView: View {
+    @Binding var reminder: Reminder
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Toggle(isOn: $reminder.isCompleted) {
+                
+            }
+            .toggleStyle(.reminder)
+            Text(reminder.title)
+        }
+    }
+}
+
+struct ContainerForReminder: View {
+    @State private var reminder = Reminder.samples[0]
+    var body: some View {
+        List {
+            RemindersListRowView(reminder: $reminder)
+        }
     }
 }
 
 #Preview {
-    RemindersListRowView()
+    ContainerForReminder()
 }

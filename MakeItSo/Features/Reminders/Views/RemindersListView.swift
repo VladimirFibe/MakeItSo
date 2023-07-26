@@ -4,16 +4,8 @@ struct RemindersListView: View {
     @StateObject var viewModel = RemindersListViewModel()
     @State private var isAddReminderDialogPresented = false
     var body: some View {
-        List(viewModel.reminders) { reminder in
-            HStack {
-                Image(systemName: reminder.isCompleted ? "largecircle.fill.circle" : "circle")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                    .onTapGesture {
-                        viewModel.toggleCompleted(reminder)
-                    }
-                Text(reminder.title)
-            }
+        List($viewModel.reminders) { $reminder in
+            RemindersListRowView(reminder: $reminder)
         }
         .toolbar {
             ToolbarItemGroup(placement: .bottomBar) {

@@ -1,8 +1,13 @@
 import SwiftUI
 
-struct AddReminderView: View {
+struct EditReminderDetailsView: View {
     @Environment(\.dismiss) private var dismiss
-    @State private var reminder = Reminder(title: "")
+    enum Mode {
+        case add
+        case edit
+    }
+    var mode: Mode = .add
+    @State var reminder = Reminder(title: "")
     enum FocusableField: Hashable {
         case title
     }
@@ -13,13 +18,14 @@ struct AddReminderView: View {
             Form {
                 TextField("Title", text: $reminder.title)
                     .focused($focusedField, equals: .title)
+                    .onSubmit { commit() }
             }
-            .navigationTitle("New Reminder")
+            .navigationTitle(mode == .add ? "New Reminder" : "Details")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button(action: commit) {
-                        Text("Add")
+                        Text(mode == .add ? "Add" : "Done")
                     }
                     .disabled(reminder.title.isEmpty)
                 }
@@ -42,7 +48,14 @@ struct AddReminderView: View {
         dismiss()
     }
 }
-
+struct ContainerForDetailView: View {
+    @State var reminder = Reminder.samples[0]
+    var body: some View {
+        EditReminderDetailsView(mode: .edit, reminder: reminder) { reminder in
+            print(reminder.title)
+        }
+    }
+}
 #Preview {
-    AddReminderView(onCommit: { reminder in print(reminder.title)})
+    ContainerForDetailView()
 }

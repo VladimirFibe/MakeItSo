@@ -28,8 +28,8 @@ struct SettingsView: View {
                                 .frame(maxWidth: .infinity)
                         }
                     } else {
-                        Button(action: signUp) {
-                            Text("Sign up")
+                        Button(action: signOut) {
+                            Text("Sign out")
                                 .frame(maxWidth: .infinity)
                         }
                     }

@@ -4,12 +4,15 @@ import FirebaseAuth
 import Combine
 
 class SettingsViewModel: ObservableObject {
+    @Injected(\.authenticationService) private var authenticationService
     @Published var user: User?
     @Published var displayName = ""
     @Published var isGuestUser = false
     @Published var loggedInAs = ""
     
     init() {
+        authenticationService.$user
+            .assign(to: &$user)
         $user
             .compactMap { $0?.isAnonymous }
             .assign(to: &$isGuestUser)
@@ -27,6 +30,6 @@ class SettingsViewModel: ObservableObject {
     }
     
     func signOut() {
-        fatalError("Not implemented yet")
+        authenticationService.signOut()
     }
 }

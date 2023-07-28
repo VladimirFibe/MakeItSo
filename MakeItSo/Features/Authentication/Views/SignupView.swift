@@ -88,7 +88,7 @@ struct SignupView: View {
     var body: some View {
       VStack {
         HStack {
-          Image(colorScheme == .light ? "logo-light" : "logo-dark")
+          Image("logo")
             .resizable()
             .frame(width: 30, height: 30 , alignment: .center)
             .cornerRadius(8)
@@ -99,7 +99,7 @@ struct SignupView: View {
         .padding(.horizontal)
 
         VStack {
-          Image(colorScheme == .light ? "auth-hero-light" : "auth-hero-dark")
+          Image("hero")
             .resizable()
             .frame(maxWidth: .infinity)
             .scaledToFit()
@@ -117,9 +117,13 @@ struct SignupView: View {
         }
 
         SignInWithAppleButton(.signUp) { request in
-          // handle sign in request
+            viewModel.handleSignInWithAppleRequest(request)
         } onCompletion: { result in
-          // handle completion
+            Task {
+                if await viewModel.handleSignInWithAppleCompletion(result) {
+                    dismiss()
+                }
+            }
         }
         .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
         .frame(maxWidth: .infinity, minHeight: 50, maxHeight: 50)

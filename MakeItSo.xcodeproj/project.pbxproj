@@ -21,11 +21,13 @@
 		E83A02982A71A1F300F87EE2 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = E83A02972A71A1F300F87EE2 /* FirebaseInstallations */; };
 		E849D9C32A72418D004AFA5C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E849D9C22A72418D004AFA5C /* SettingsView.swift */; };
 		E85924A92A71233800640A06 /* RemindersListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85924A82A71233800640A06 /* RemindersListRowView.swift */; };
+		E85ACB222A7360BC00D5C62A /* CryptoUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85ACB212A7360BB00D5C62A /* CryptoUtils.swift */; };
 		E85F725B2A72AEEC008D8283 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F725A2A72AEEC008D8283 /* UserProfileView.swift */; };
 		E8A3E4712A72061800201967 /* ReminderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3E4702A72061800201967 /* ReminderRepository.swift */; };
 		E8A3E4742A721EED00201967 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = E8A3E4732A721EED00201967 /* Factory */; };
 		E8A3F49A2A721FB600DCD09C /* Firebase+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A3F4992A721FB600DCD09C /* Firebase+Injection.swift */; };
 		E8B323292A717B6C0023B841 /* ReminderToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B323282A717B6C0023B841 /* ReminderToggleStyle.swift */; };
+		E8BF87692A72CEC000D279DA /* AuthenticationService+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BF87682A72CEC000D279DA /* AuthenticationService+Injection.swift */; };
 		E8C693BE2A72B8EA0074952C /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C693BD2A72B8EA0074952C /* AuthenticationView.swift */; };
 		E8CC2CED2A70F5F10019DDC5 /* MakeItSoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC2CEC2A70F5F10019DDC5 /* MakeItSoApp.swift */; };
 		E8CC2CEF2A70F5F10019DDC5 /* RemindersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC2CEE2A70F5F10019DDC5 /* RemindersListView.swift */; };
@@ -34,6 +36,7 @@
 		E8CC2CFC2A70F8570019DDC5 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC2CFB2A70F8570019DDC5 /* Reminder.swift */; };
 		E8CC2D002A70FD000019DDC5 /* EditReminderDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC2CFF2A70FD000019DDC5 /* EditReminderDetailsView.swift */; };
 		E8CC2D072A7114570019DDC5 /* RemindersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CC2D062A7114570019DDC5 /* RemindersListViewModel.swift */; };
+		E8D9E9D02A72CB0D005BB731 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D9E9CF2A72CB0D005BB731 /* AuthenticationService.swift */; };
 		E8DFA7EB2A729E3200C5B146 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DFA7EA2A729E3200C5B146 /* AuthenticationViewModel.swift */; };
 		E8FBB6CE2A729C9F0032F9B0 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FBB6CD2A729C9F0032F9B0 /* UserProfileViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -44,13 +47,16 @@
 		E8102B962A72C19000BF92EB /* GoogleSignInButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 		E810CB932A722DAE002603F5 /* Repositories+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Repositories+Injection.swift"; sourceTree = "<group>"; };
 		E8192E392A723FA800C1F738 /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		E8315CEA2A735D9D00C31FBB /* MakeItSo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MakeItSo.entitlements; sourceTree = "<group>"; };
 		E83A028A2A719F5900F87EE2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E849D9C22A72418D004AFA5C /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		E85924A82A71233800640A06 /* RemindersListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersListRowView.swift; sourceTree = "<group>"; };
+		E85ACB212A7360BB00D5C62A /* CryptoUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptoUtils.swift; sourceTree = "<group>"; };
 		E85F725A2A72AEEC008D8283 /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		E8A3E4702A72061800201967 /* ReminderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderRepository.swift; sourceTree = "<group>"; };
 		E8A3F4992A721FB600DCD09C /* Firebase+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Firebase+Injection.swift"; sourceTree = "<group>"; };
 		E8B323282A717B6C0023B841 /* ReminderToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderToggleStyle.swift; sourceTree = "<group>"; };
+		E8BF87682A72CEC000D279DA /* AuthenticationService+Injection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AuthenticationService+Injection.swift"; sourceTree = "<group>"; };
 		E8C693BD2A72B8EA0074952C /* AuthenticationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		E8CC2CE92A70F5F10019DDC5 /* MakeItSo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItSo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CC2CEC2A70F5F10019DDC5 /* MakeItSoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeItSoApp.swift; sourceTree = "<group>"; };
@@ -61,6 +67,7 @@
 		E8CC2CFB2A70F8570019DDC5 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		E8CC2CFF2A70FD000019DDC5 /* EditReminderDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReminderDetailsView.swift; sourceTree = "<group>"; };
 		E8CC2D062A7114570019DDC5 /* RemindersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersListViewModel.swift; sourceTree = "<group>"; };
+		E8D9E9CF2A72CB0D005BB731 /* AuthenticationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		E8DFA7EA2A729E3200C5B146 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		E8FBB6CD2A729C9F0032F9B0 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +113,14 @@
 				E849D9C22A72418D004AFA5C /* SettingsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E8315CEB2A73603800C31FBB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E85ACB212A7360BB00D5C62A /* CryptoUtils.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		E8A3E46F2A7205E100201967 /* Repositories */ = {
@@ -161,6 +176,7 @@
 		E8CC2CEB2A70F5F10019DDC5 /* MakeItSo */ = {
 			isa = PBXGroup;
 			children = (
+				E8315CEA2A735D9D00C31FBB /* MakeItSo.entitlements */,
 				E8CC2CFE2A70F8AE0019DDC5 /* Supporting Files */,
 				E8CC2CFD2A70F89C0019DDC5 /* App */,
 				E8CC2D032A7113A60019DDC5 /* Features */,
@@ -246,6 +262,7 @@
 		E8FBB6C92A729C510032F9B0 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				E8315CEB2A73603800C31FBB /* Utilities */,
 				E8FBB6CC2A729C7B0032F9B0 /* Views */,
 				E8FBB6CB2A729C6B0032F9B0 /* ViewModels */,
 				E8FBB6CA2A729C5F0032F9B0 /* Services */,
@@ -256,6 +273,8 @@
 		E8FBB6CA2A729C5F0032F9B0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E8BF87682A72CEC000D279DA /* AuthenticationService+Injection.swift */,
+				E8D9E9CF2A72CB0D005BB731 /* AuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -377,6 +396,7 @@
 				E8FBB6CE2A729C9F0032F9B0 /* UserProfileViewModel.swift in Sources */,
 				E8CC2CFC2A70F8570019DDC5 /* Reminder.swift in Sources */,
 				E8CC2CEF2A70F5F10019DDC5 /* RemindersListView.swift in Sources */,
+				E85ACB222A7360BC00D5C62A /* CryptoUtils.swift in Sources */,
 				E85F725B2A72AEEC008D8283 /* UserProfileView.swift in Sources */,
 				E8102B952A72BAEB00BF92EB /* LoginView.swift in Sources */,
 				E8192E3A2A723FA800C1F738 /* SettingsViewModel.swift in Sources */,
@@ -384,6 +404,8 @@
 				E8CC2D002A70FD000019DDC5 /* EditReminderDetailsView.swift in Sources */,
 				E8C693BE2A72B8EA0074952C /* AuthenticationView.swift in Sources */,
 				E8CC2CED2A70F5F10019DDC5 /* MakeItSoApp.swift in Sources */,
+				E8D9E9D02A72CB0D005BB731 /* AuthenticationService.swift in Sources */,
+				E8BF87692A72CEC000D279DA /* AuthenticationService+Injection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MakeItSo/MakeItSo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MakeItSo/Preview Content\"";
@@ -543,6 +566,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MakeItSo/MakeItSo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MakeItSo/Preview Content\"";

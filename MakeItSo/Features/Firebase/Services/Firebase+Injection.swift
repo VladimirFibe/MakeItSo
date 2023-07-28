@@ -33,4 +33,20 @@ extension Container {
             return Firestore.firestore()
         }.singleton
     }
+    
+    public var auth: Factory<Auth> {
+        Factory(self) {
+            var environment = ""
+            if Container.shared.useEmulator() {
+                let host = "localhost"
+                let port = 9099
+                environment = "to use the local emulator on \(host):\(port)"
+                Auth.auth().useEmulator(withHost: host, port: port)
+            } else {
+                environment = "to use the Firebase backend"
+            }
+            print("Configuring Firebase Auth \(environment)")
+            return Auth.auth()
+        }.singleton
+    }
 }
